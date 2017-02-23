@@ -1,0 +1,70 @@
+﻿@using ContactManager.Models
+@model ContactManager.Models.Contact
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Contact</h4>
+        <hr />
+        <div class="form-group">
+            <label class="control-label col-md-2" for="FirstName">First Name</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="FirstName" name="FirstName" type="text" value="">
+                <span class="field-validation-valid text-danger" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="LastName">Last Name</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="LastName" name="LastName" type="text" value="">
+                <span class="field-validation-valid text-danger" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="EmailAddress">EmailAddress</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="EmailAddress" name="EmailAddress" type="text" value="">
+                <span class="field-validation-valid text-danger" data-valmsg-for="EmailAddress" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="BirthDate">Birth Date</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="BirthDate" name="BirthDate" type="text" value="">
+                <span class="field-validation-valid text-danger" data-valmsg-for="BirthDate" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="NumberOfComputers">Number Of Computers</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="NumberOfComputers" name="NumberOfComputers" type="text" value="">
+                <span class="field-validation-valid text-danger" data-valmsg-for="NumberOfComputers" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>    
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
